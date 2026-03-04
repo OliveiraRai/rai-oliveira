@@ -1,5 +1,12 @@
 import type { Metadata } from "next"
+import { Poppins } from "next/font/google"
 import "./globals.css"
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "400", "900"],
+  variable: "--font-poppins",
+})
 
 export const metadata: Metadata = {
   title: "Raí Oliveira | Front-End Developer",
@@ -23,8 +30,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" className="dark">
-      <body>{children}</body>
+    <html lang="pt-BR" className={`dark ${poppins.variable}`}>
+      <body className="font-sans bg-background text-foreground antialiased">
+        {children}
+      </body>
     </html>
   )
 }

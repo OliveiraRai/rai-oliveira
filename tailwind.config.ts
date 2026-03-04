@@ -2,11 +2,12 @@ import type { Config } from "tailwindcss"
 
 const config: Config = {
   darkMode: "class",
-  content: [
-    "./src/**/*.{ts,tsx}",
-  ],
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-poppins)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

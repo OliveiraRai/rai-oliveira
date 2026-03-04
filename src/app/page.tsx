@@ -1,11 +1,20 @@
+import { Navbar } from "../components/layouts/Navbar"
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <div className="container mx-auto px-6 py-24">
-        <h1 className="text-4xl font-black">
-          Portfolio em construção
-        </h1>
-      </div>
-    </main>
+    <>
+      <Navbar />
+
+      <main className="min-h-screen pt-20">
+        <section className="container mx-auto px-6 py-32">
+          <h1 className="text-5xl md:text-7xl font-black leading-tight">
+            Construindo experiências digitais
+            <span className="block text-muted font-thin mt-4">
+              com foco em performance e design.
+            </span>
+          </h1>
+        </section>
+      </main>
+    </>
   )
 }
